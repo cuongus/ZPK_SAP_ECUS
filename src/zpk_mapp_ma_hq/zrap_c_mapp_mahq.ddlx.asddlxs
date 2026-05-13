@@ -1,0 +1,188 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'UUID'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'UUID'
+annotate view ZRAP_C_MAPP_MAHQ with
+{
+  @EndUserText.label: 'UUID'
+  @UI.facet: [ {
+    label: 'General Information',
+    id: 'GeneralInfo',
+    purpose: #STANDARD,
+    position: 10 ,
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+  @UI.identification: [ {
+    position: 10 ,
+    label: 'UUID'
+  } ]
+  @UI.lineItem: [ {
+    position: 10 ,
+    label: 'UUID'
+  } ]
+  @UI.selectionField: [ {
+    position: 10
+  } ]
+
+  @UI.hidden: true
+  UUID;
+
+  @UI.identification: [ {
+    position: 20
+  } ]
+  @UI.lineItem: [ {
+    position: 20
+  } ]
+  @UI.selectionField: [ {
+    position: 20
+  } ]
+  CompanyCode;
+
+  @EndUserText.label: 'CompanyCode Name'
+  @UI.identification: [ {
+  position: 30
+  } ]
+  @UI.lineItem: [ {
+    position: 30
+  } ]
+  @UI.selectionField: [ {
+    position: 30
+  } ]
+  @Consumption.filter.hidden: true
+  CompanyCodeName;
+
+  @EndUserText.label: 'Mã hàng SAP'
+  @UI.identification: [ {
+  position: 40
+  } ]
+  @UI.lineItem: [ {
+    position: 40
+  } ]
+  @UI.selectionField: [ {
+    position: 40
+  } ]
+  MaHangSAP;
+
+  @EndUserText.label: 'Tên mã hàng SAP'
+  @UI.identification: [ {
+  position: 50
+  } ]
+  @UI.lineItem: [ {
+    position: 50
+  } ]
+  @UI.selectionField: [ {
+    position: 50
+  } ]
+  @Consumption.filter.hidden: true
+  TenMaHangSAP;
+
+  @EndUserText.label: 'Mã hải quan'
+  @UI.identification: [ {
+    position: 60 ,
+    label: 'Mã hải quan'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 ,
+    label: 'Mã hải quan'
+  } ]
+  @UI.selectionField: [ {
+    position: 60
+  } ]
+  MaHaiQuan;
+
+  @EndUserText.label: 'Tên mã hải quan'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'Tên mã hải quan'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'Tên mã hải quan'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  @Consumption.filter.hidden: true
+  tenhaiquan;
+
+  @UI.identification: [ {
+    position: 80
+  } ]
+  @UI.lineItem: [ {
+    position: 80
+  } ]
+  @UI.selectionField: [ {
+    position: 80
+  } ]
+  HinhThuc;
+
+  @UI.identification: [ {
+    position: 90
+  } ]
+  @UI.lineItem: [ {
+    position: 90
+  } ]
+  @UI.selectionField: [ {
+    position: 90
+  } ]
+  CreatedBy;
+
+  @UI.identification: [ {
+    position: 100
+  } ]
+  @UI.lineItem: [ {
+    position: 100
+  } ]
+  @UI.selectionField: [ {
+    position: 100
+  } ]
+  CreatedAt;
+
+  @UI.identification: [ {
+    position: 110
+  } ]
+  @UI.lineItem: [ {
+    position: 110
+  } ]
+  @UI.selectionField: [ {
+    position: 110
+  } ]
+  LocalLastChangedBy;
+
+  @UI.identification: [ {
+    position: 120
+  } ]
+  @UI.lineItem: [ {
+    position: 120
+  } ]
+  @UI.selectionField: [ {
+    position: 120
+  } ]
+  LocalLastChangedAt;
+
+  @UI.identification: [ {
+    position: 130
+  } ]
+  @UI.lineItem: [ {
+    position: 130
+  } ]
+  @UI.selectionField: [ {
+    position: 130
+  } ]
+  LastChangedAt;
+
+  @EndUserText.label: '_BaseEntity'
+  @UI.identification: [ {
+    position: 140 ,
+    label: '_BaseEntity'
+  } ]
+  @UI.lineItem: [ {
+    position: 140 ,
+    label: '_BaseEntity'
+  } ]
+  @UI.selectionField: [ {
+    position: 140
+  } ]
+  _BaseEntity;
+}

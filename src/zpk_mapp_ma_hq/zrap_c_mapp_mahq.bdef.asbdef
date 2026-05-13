@@ -1,0 +1,24 @@
+projection implementation in class ZRAP_BP_C_MAPP_MAHQ unique;
+strict ( 2 );
+extensible;
+use draft;
+use side effects;
+define behavior for ZRAP_C_MAPP_MAHQ alias Mapping_Ma_HQ
+extensible
+use etag
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use action downloadFile;
+  use action fileUpload;
+  use action Precheck;
+
+}

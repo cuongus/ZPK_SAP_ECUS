@@ -1,0 +1,267 @@
+@Metadata.layer: #CORE
+annotate entity zcs_ecus_header with
+{
+  @UI.facet          : [
+   {
+   id                 : 'General',
+   purpose            : #STANDARD,
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'General',
+   type               : #COLLECTION,
+   targetQualifier    : 'General'
+   },
+   {
+   id                 : 'BasicInfo',
+   purpose            : #STANDARD,
+   parentId           : 'General',
+   position           : 10,
+   isPartOfPreview    : true,
+   label              : 'Basic Info',
+   type               : #FIELDGROUP_REFERENCE,
+   targetQualifier    : 'QFBasicInfo'
+   },
+   {
+   id                 : 'Items',
+   purpose            : #STANDARD,
+   type               : #LINEITEM_REFERENCE,
+   label              : 'Items',
+   position           : 20,
+   targetElement      : '_ECUSItems'
+   }
+   ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Số tờ khai Hải quan'
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 10 ,  qualifier: 'QFBasicInfo'  }]
+  DeclarationNo;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Pro-Forma Invoice'
+  @UI.selectionField: [{ position: 20 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 20 ,  qualifier: 'QFBasicInfo'  }]
+  BillingDocument;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'Invoice Date'
+  @UI.selectionField: [{ position: 30 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 30 ,  qualifier: 'QFBasicInfo'  }]
+  BillingDocumentDate;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Shipper / Exporter Name'
+  @UI.selectionField: [{ position: 40 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 40 ,  qualifier: 'QFBasicInfo'  }]
+  ShipperExporterName;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Shipper / Exporter Address'
+  @UI.selectionField: [{ position: 50 }]
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 50 ,  qualifier: 'QFBasicInfo'  }]
+  ShipperExporterAddress;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Buyer / Importer Name'
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 60 ,  qualifier: 'QFBasicInfo'  }]
+  BuyerImporterName;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'Buyer / Importer Address'
+  @UI.fieldGroup     : [ { type: #STANDARD,  position: 70 ,  qualifier: 'QFBasicInfo'  }]
+  BuyerImporterAddress;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Consignee Name'
+  ConsigneeName;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Consignee Address'
+  ConsigneeAddress;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Notify Party 1'
+  NotifyParty1;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Notify Party 2'
+  NotifyParty2;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Ship To'
+  Shipto;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'The Thirt Party'
+  TheThirtParty;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @EndUserText.label: 'Remarks (PL KH)'
+//  @UI.hidden: true
+  Remarks;
+
+  @UI.lineItem: [{ position: 150 }]
+  @UI.identification: [{ position: 150 }]
+  @EndUserText.label: 'Incoterms'
+  Incoterms;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @EndUserText.label: 'Port of Shipment'
+  PortofShipment;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @EndUserText.label: 'Port of Discharge'
+  PortofDischarge;
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @EndUserText.label: 'Final Destination'
+  FinalDestination;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  @EndUserText.label: 'Vessel\'s Name'
+  VesselsNames;
+
+  @UI.lineItem: [{ position: 200 }]
+  @UI.identification: [{ position: 200 }]
+  @EndUserText.label: 'Sailling on or about'
+  SaillingOnOrAbout;
+
+  @UI.lineItem: [{ position: 210 }]
+  @UI.identification: [{ position: 210 }]
+  @EndUserText.label: 'Trunk Vessel'
+  TrunkVessel;
+
+  @UI.lineItem: [{ position: 220 }]
+  @UI.identification: [{ position: 220 }]
+  @EndUserText.label: 'Estimated of Delivery'
+  EstimatedOfDelivery;
+
+  @UI.lineItem: [{ position: 230 }]
+  @UI.identification: [{ position: 230 }]
+  @EndUserText.label: 'Country Of Origin'
+  CountryOfOrigin;
+
+  @UI.lineItem: [{ position: 240 }]
+  @UI.identification: [{ position: 240 }]
+  @EndUserText.label: 'Bill Of Lading'
+  BillOfLading;
+
+  @UI.lineItem: [{ position: 250 }]
+  @UI.identification: [{ position: 250 }]
+  @EndUserText.label: 'Carrier'
+  Carrier;
+
+  @UI.lineItem: [{ position: 260 }]
+  @UI.identification: [{ position: 260 }]
+  @EndUserText.label: 'Term of Payment'
+  TermofPayment;
+
+  @UI.lineItem: [{ position: 270 }]
+  @UI.identification: [{ position: 270 }]
+  @EndUserText.label: 'Terms of Delivery'
+  TermsOfDelivery;
+
+  @UI.lineItem: [{ position: 280 }]
+  @UI.identification: [{ position: 280 }]
+  @EndUserText.label: 'Deposit (Contract)'
+  DepositContract;
+
+  @UI.lineItem: [{ position: 290 }]
+  @UI.identification: [{ position: 290 }]
+  @EndUserText.label: 'CYLINDER (Quantity)'
+  CYLINDERQuantity;
+
+  @UI.lineItem: [{ position: 300 }]
+  @UI.identification: [{ position: 300 }]
+  @EndUserText.label: 'CYLINDER (Amount)'
+  CYLINDERAmount;
+
+  @UI.lineItem: [{ position: 310 }]
+  @UI.identification: [{ position: 310 }]
+  @EndUserText.label: 'Term Of Payment (Contract)'
+  TermOfPaymentContract;
+
+  @UI.lineItem: [{ position: 320 }]
+  @UI.identification: [{ position: 320 }]
+  @EndUserText.label: 'Time of Delivery'
+  TimeOfDelivery;
+
+  @UI.lineItem: [{ position: 330 }]
+  @UI.identification: [{ position: 330 }]
+  @EndUserText.label: 'Partial Shipment'
+  PartialShipment;
+
+  @UI.lineItem: [{ position: 340 }]
+  @UI.identification: [{ position: 340 }]
+  @EndUserText.label: 'Sales Org'
+  SalesOrganization;
+
+  @UI.lineItem: [{ position: 350 }]
+  @UI.identification: [{ position: 350 }]
+  @EndUserText.label: 'Distribution Channel'
+  DistributionChannel;
+
+  @UI.lineItem: [{ position: 360 }]
+  @UI.identification: [{ position: 360 }]
+  @EndUserText.label: 'Search Term'
+  SearchTerm1;
+
+  @UI.lineItem: [{ position: 370 }]
+  @UI.identification: [{ position: 370 }]
+  @EndUserText.label: 'Commercial Invoice'
+  CommercialInvoice;
+
+  @UI.lineItem: [{ position: 380 }]
+  @UI.identification: [{ position: 380 }]
+  @EndUserText.label: 'Người gửi hàng (VGM)'
+  ShipperVGM;
+
+  @UI.lineItem: [{ position: 390 }]
+  @UI.identification: [{ position: 390 }]
+  @EndUserText.label: 'Địa chỉ (VGM)'
+  AddressVGM;
+
+  @UI.lineItem: [{ position: 400 }]
+  @UI.identification: [{ position: 400 }]
+  @EndUserText.label: 'Criticality'
+  Criticality;
+
+  @UI.lineItem: [{ position: 410 }]
+  @UI.identification: [{ position: 410 }]
+  @EndUserText.label: 'Declaration Status'
+  StatusOfDeclaration;
+
+  @UI.lineItem: [{ position: 420 }]
+  @UI.identification: [{ position: 420 }]
+  @EndUserText.label: 'Integration Status'
+  StatusOfIntegration;
+
+  @UI.lineItem: [{ position: 430 }]
+  @UI.identification: [{ position: 430 }]
+  @EndUserText.label: 'Message'
+  Message;
+
+  @EndUserText.label: 'File PackingList HQ'
+  FilePackingListHQ;
+
+  /* Associations */
+  //   _ECUSItems;
+
+}

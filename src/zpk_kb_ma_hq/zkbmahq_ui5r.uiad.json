@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Khai báo Mã Hải quan"
+  },
+  "ui5AppDetails": {
+    "appId": "zkbmahq"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_54446A7E80EA61F1E3C49B27FE25422A7407EC9C_TM",
+    "semanticObject": "zkbmahq",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_54446A7E80EA61F1E3C49B27FE25422A7407EC9C_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Khai báo Mã Hải quan"
+      }
+    }
+  ]
+}

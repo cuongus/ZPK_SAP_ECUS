@@ -1,0 +1,11 @@
+@EndUserText: {
+  label: 'Service Definition for ZRAP_C_KB_MAHQ'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZRAP_C_KB_MAHQ'
+  }
+}
+define service ZRAPUI_KB_MAHQ provider contracts odata_v4_ui {
+  expose ZRAP_C_KB_MAHQ as Khai_Bao_Ma_HQ;
+}

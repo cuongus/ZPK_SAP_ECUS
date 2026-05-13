@@ -1,0 +1,69 @@
+managed implementation in class ZRAP_BP_R_KB_MAHQ unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZRAP_R_KB_MAHQ alias Khai_Bao_Ma_HQ
+persistent table zrap_kb_mahq
+extensible
+draft table zdrap_kb_mahq
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+  UUID,
+  CompanyCodeName,
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  field ( numbering : managed )
+  UUID;
+
+  field ( readonly : update ) CompanyCode;
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  determination Get_CompanyCode_Name on modify { field CompanyCode; }
+
+  side effects
+  { field CompanyCode affects field CompanyCodeName;
+  }
+  internal action effects_text;
+
+  determination Check_modify on modify { field Companycode, MaHaiQuan, HinhThuc; update; }
+
+  validation Check_Duplicate_save on save { field Companycode, MaHaiQuan, HinhThuc; create; update; }
+
+  static action Precheck parameter ZI_FILE_ABS result [1] zi_file_abs;
+
+  static action fileUpload parameter ZI_FILE_ABS result [1] ZI_FILE_ABS;
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  mapping for zrap_kb_mahq corresponding extensible
+    {
+      UUID               = UUID;
+      Companycode        = COMPANYCODE;
+      CompanyCodeName    = COMPANYCODENAME;
+      MaHaiQuan          = MA_HAI_QUAN;
+      TenMaHaiQuan       = TEN_MA_HAI_QUAN;
+      HinhThuc           = HINH_THUC;
+      CreatedBy          = CREATED_BY;
+      CreatedAt          = CREATED_AT;
+      LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+      LastChangedAt      = LAST_CHANGED_AT;
+    }
+
+}

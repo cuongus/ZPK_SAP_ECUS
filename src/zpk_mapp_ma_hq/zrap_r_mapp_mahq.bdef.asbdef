@@ -1,0 +1,80 @@
+managed with additional save implementation in class ZRAP_BP_R_MAPP_MAHQ unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZRAP_R_MAPP_MAHQ alias Mapping_Ma_HQ
+persistent table zrap_mapp_mahq
+extensible
+draft table zdrap_mapp_mahq
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master ( global )
+{
+  field ( readonly )
+  UUID,
+  CompanyCodeName,
+  TenMaHaiQuan,
+  TenMaHangSAP,
+  CreatedBy,
+  CreatedAt,
+  LocalLastChangedBy,
+  LocalLastChangedAt,
+  LastChangedAt;
+
+  field ( numbering : managed )
+  UUID;
+
+  field ( readonly : update ) CompanyCode;
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  determination Get_CompanyCode_Name on modify { field CompanyCode; }
+
+  determination Get_TenMaHang_SAP on modify { field MaHangSAP; }
+
+  determination Get_Ten_HQ on modify { field MaHangSAP, HinhThuc; }
+
+  side effects
+  { field CompanyCode affects field CompanyCodeName;
+    field MaHangSAP affects field TenMaHangSAP;
+    field MaHaiQuan affects field TenMaHaiQuan;
+    field HinhThuc affects field TenMaHaiQuan;
+  }
+  internal action effects_text;
+
+  determination Check_modify on modify { field Companycode, MaHaiQuan, MaHangSap, HinhThuc; update; }
+
+  validation Check_Duplicate_save on save { field Companycode, MaHaiQuan, MaHangSap, HinhThuc; create; update; }
+
+  static action Precheck parameter ZI_FILE_ABS result [1] zi_file_abs;
+
+  static action fileUpload parameter ZI_FILE_ABS result [1] ZI_FILE_ABS;
+
+  static action downloadFile result [1] ZI_FILE_ABS;
+
+  mapping for zrap_mapp_mahq corresponding extensible
+    {
+      UUID               = UUID;
+      Companycode        = COMPANYCODE;
+      CompanyCodeName    = COMPANYCODENAME;
+      MaHaiQuan          = MA_HAI_QUAN;
+      TenMaHaiQuan       = TEN_MA_HAI_QUAN;
+      MaHangSap          = MA_HANG_SAP;
+      TenMaHangSAP       = TEN_MA_HANG_SAP;
+      HinhThuc           = HINH_THUC;
+      CreatedBy          = CREATED_BY;
+      CreatedAt          = CREATED_AT;
+      LocalLastChangedBy = LOCAL_LAST_CHANGED_BY;
+      LocalLastChangedAt = LOCAL_LAST_CHANGED_AT;
+      LastChangedAt      = LAST_CHANGED_AT;
+    }
+
+}

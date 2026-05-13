@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZKBMAHQ</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Message Class Khai báo Hải quan</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZKBMAHQ</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>Đã tồn tại bản ghi Companycode &amp;1/ Mã Hải quan &amp;2/ Hình thức &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZKBMAHQ</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Đã tồn tại bản ghi CoCode &amp;1/ Mã HQ &amp;2/ Mã Hàng SAP &amp;3/ Hình thức &amp;4</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZKBMAHQ</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Không tồn tại bản ghi Companycode &amp;1/ Mã Hải quan &amp;2/ Hình thức &amp;3</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZKBMAHQ</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Hình thức chỉ được điền 1 hoặc để trống</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

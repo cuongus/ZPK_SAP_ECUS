@@ -1,0 +1,6 @@
+@EndUserText.label: 'ZRAP_R_KB_MAHQ'
+@MappingRole: true
+define role ZRAP_R_KB_MAHQ {
+  grant select on ZRAP_R_KB_MAHQ
+  where TRUE;
+}

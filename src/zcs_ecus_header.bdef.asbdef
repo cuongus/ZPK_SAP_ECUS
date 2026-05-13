@@ -1,0 +1,42 @@
+unmanaged implementation in class zbp_cs_ecus_header unique;
+strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+//with draft;
+define behavior for zcs_ecus_header alias ECUSHeader
+//late numbering
+lock master
+authorization master ( global )
+//etag master <field_name>
+{
+  create ( authorization : global );
+  update;
+  delete;
+  field ( readonly ) BillingDocument;
+  association _ECUSItems { create; }
+
+  static action HeaderChange parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+  static action FormVGM parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+  static action FormSI parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+
+  static action CommercialInvoice parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+
+  static action PackingList parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+
+  static action SalesContract parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+
+  static action SaveData parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+}
+
+define behavior for zcs_ecus_items alias ECUSItems
+//late numbering
+lock dependent by _ECUSHeader
+authorization dependent by _ECUSHeader
+//etag master <field_name>
+{
+  update;
+  delete;
+  field ( readonly ) BillingDocument, BillingDocumentItem;
+  association _ECUSHeader;
+
+  static action ItemChange parameter ZI_FILE_ABS result [1] ZI_FILE_RES;
+}

@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Mapping Mã Hải quan"
+  },
+  "ui5AppDetails": {
+    "appId": "zmappmahq"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_159B339082BB43DF88D5A8CAE8DC5855E2644DC4_TM",
+    "semanticObject": "zmappmahq",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_159B339082BB43DF88D5A8CAE8DC5855E2644DC4_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Mapping Mã Hải quan"
+      }
+    }
+  ]
+}

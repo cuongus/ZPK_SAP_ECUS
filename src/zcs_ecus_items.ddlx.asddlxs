@@ -1,0 +1,199 @@
+@Metadata.layer: #CORE
+annotate entity zcs_ecus_items with
+{
+  @UI.facet          : [
+  {id                : 'Items',
+  purpose            : #STANDARD,
+  position           : 10,
+  label              : 'Items',
+  type               : #IDENTIFICATION_REFERENCE
+  }
+  ]
+
+  @UI.lineItem: [{ position: 10 }]
+  @UI.identification: [{ position: 10 }]
+  @EndUserText.label: 'Pro-Forma Invoice'
+  BillingDocument;
+
+  @UI.lineItem: [{ position: 20 }]
+  @UI.identification: [{ position: 20 }]
+  @EndUserText.label: 'Billing Document Item'
+  BillingDocumentItem;
+
+  @UI.lineItem: [{ position: 30 }]
+  @UI.identification: [{ position: 30 }]
+  @EndUserText.label: 'PO No'
+  PONo;
+
+  @UI.lineItem: [{ position: 40 }]
+  @UI.identification: [{ position: 40 }]
+  @EndUserText.label: 'Customer\'s PO'
+  CustomerPO;
+
+  @UI.lineItem: [{ position: 50 }]
+  @UI.identification: [{ position: 50 }]
+  @EndUserText.label: 'Customer Item No/ Style'
+  CustomerItemNoStyle;
+
+  @UI.lineItem: [{ position: 60 }]
+  @UI.identification: [{ position: 60 }]
+  @EndUserText.label: 'Commodity/ SKU'
+  CommoditySKU;
+
+  @UI.lineItem: [{ position: 70 }]
+  @UI.identification: [{ position: 70 }]
+  @EndUserText.label: 'HS CODE'
+  HSCODE;
+
+  @UI.lineItem: [{ position: 80 }]
+  @UI.identification: [{ position: 80 }]
+  @EndUserText.label: 'Lot. No'
+  LotNo;
+
+  @UI.lineItem: [{ position: 90 }]
+  @UI.identification: [{ position: 90 }]
+  @EndUserText.label: 'Sales Document'
+  SalesDocument;
+
+  @UI.lineItem: [{ position: 100 }]
+  @UI.identification: [{ position: 100 }]
+  @EndUserText.label: 'Sales Document Item'
+  SalesDocumentItem;
+
+  @UI.lineItem: [{ position: 110 }]
+  @UI.identification: [{ position: 110 }]
+  @EndUserText.label: 'Outbound Delivery'
+  OutboundDelivery;
+
+  @UI.lineItem: [{ position: 120 }]
+  @UI.identification: [{ position: 120 }]
+  @EndUserText.label: 'Outbound Delivery Item'
+  OutboundDeliveryitem;
+
+  @UI.lineItem: [{ position: 130 }]
+  @UI.identification: [{ position: 130 }]
+  @EndUserText.label: 'Material Number'
+  MaterialNumber;
+
+  @UI.lineItem: [{ position: 140 }]
+  @UI.identification: [{ position: 140 }]
+  @EndUserText.label: 'Material Description'
+  MaterialDescription;
+
+  @UI.lineItem: [{ position: 150 , label: 'DeliveryQuantity'}]
+  @UI.identification: [{ position: 150, label: 'DeliveryQuantity' }]
+  @EndUserText.label: 'Delivery Quantity'
+  BillingQuantity;
+
+  @EndUserText.label: 'Quantity (CTNS)'
+  QuantityCTNS;
+
+  @UI.lineItem: [{ position: 160 }]
+  @UI.identification: [{ position: 160 }]
+  @EndUserText.label: 'Base Unit of Measure'
+  BaseUnitofMeasure;
+
+  @UI.lineItem: [{ position: 170 }]
+  @UI.identification: [{ position: 170 }]
+  @EndUserText.label: 'Số thùng (CTNS)'
+  NumberOfBoxes;
+
+  @UI.lineItem: [{ position: 180 }]
+  @UI.identification: [{ position: 180 }]
+  @EndUserText.label: 'PALLET( PCS)'
+  PALLET;
+
+  @UI.lineItem: [{ position: 190 }]
+  @UI.identification: [{ position: 190 }]
+  @EndUserText.label: 'G.weight (kgs)'
+  Gweight;
+
+  @UI.lineItem: [{ position: 200 }]
+  @UI.identification: [{ position: 200 }]
+  @EndUserText.label: 'N.weight (kgs)'
+  Nweight;
+
+  @UI.lineItem: [{ position: 210 }]
+  @UI.identification: [{ position: 210 }]
+  @EndUserText.label: 'CARTON SIZE (MM)'
+  CARTONSIZE;
+
+  @UI.lineItem: [{ position: 220 }]
+  @UI.identification: [{ position: 220 }]
+  @EndUserText.label: 'BAG SIZE (MM)'
+  @UI.hidden: true
+  BAGSIZE;
+
+  @UI.lineItem: [{ position: 230 }]
+  @UI.identification: [{ position: 230 }]
+  @EndUserText.label: 'CBM'
+  CBM;
+
+  @UI.lineItem: [{ position: 240 }]
+  @UI.identification: [{ position: 240 }]
+  @EndUserText.label: 'Số Container'
+  ContainerNo;
+
+  @UI.lineItem: [{ position: 250 }]
+  @UI.identification: [{ position: 250 }]
+  @EndUserText.label: 'Số chì'
+  ContainerSealNo;
+
+  @UI.lineItem: [{ position: 260 }]
+  @UI.identification: [{ position: 260 }]
+  @EndUserText.label: 'Phân loại PTVT'
+  TypePTVT;
+
+  @UI.lineItem: [{ position: 270 }]
+  @UI.identification: [{ position: 270 }]
+  @EndUserText.label: 'Số lượng PTVT'
+  QuantityPTVT;
+
+  @UI.lineItem: [{ position: 280 }]
+  @UI.identification: [{ position: 280 }]
+  @EndUserText.label: 'UNIT PRICE FOB (USD/PC)'
+  UNITPRICEFOB;
+
+  @UI.lineItem: [{ position: 290 }]
+  @UI.identification: [{ position: 290 }]
+  @EndUserText.label: 'AMOUNT (USD)'
+  AMOUNT;
+
+  @UI.lineItem: [{ position: 300 }]
+  @UI.identification: [{ position: 300 }]
+  @EndUserText.label: 'PH_Sales 2'
+  PH_Sales2;
+
+  @UI.lineItem: [{ position: 310 }]
+  @UI.identification: [{ position: 310 }]
+  @EndUserText.label: 'Kích thước hàng'
+  ItemSize;
+
+  @UI.lineItem: [{ position: 320 }]
+  @UI.identification: [{ position: 320 }]
+  @EndUserText.label: 'Type of Containers'
+  TypeofContainers;
+
+  @UI.lineItem: [{ position: 330 }]
+  @UI.identification: [{ position: 330 }]
+  @EndUserText.label: 'Commodity'
+  CommodityNoChange;
+
+  @UI.lineItem: [{ position: 340 }]
+  @UI.identification: [{ position: 340 }]
+  @EndUserText.label: 'Remarks'
+  Remarks;
+
+  @EndUserText.label: 'Verified gross mass of a packed container (kg)'
+  @UI.lineItem: [{ position: 350 }]
+  @UI.identification: [{ position: 350 }]
+  VerifiedGWeight;
+
+  @UI.lineItem: [{ position: 360 }]
+  @UI.identification: [{ position: 360 }]
+  @EndUserText.label: 'Sắp xếp item packing list'
+  SortItemPackingList;
+  /* Associations */
+  //  _ECUSHeader;
+
+}

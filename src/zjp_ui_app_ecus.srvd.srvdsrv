@@ -1,0 +1,8 @@
+@EndUserText.label: 'Service for App ECUS'
+define service ZJP_UI_APP_ECUS {
+  expose zcs_ecus_header             as ECUSHeader;
+  expose zcs_ecus_items              as ECUSItems;
+  expose I_BillingDocumentBasicStdVH as BillingDocumentVH;
+  expose I_SalesDocumentStdVH        as SalesDocumentVH;
+  expose I_SalesDocumentItemStdVH    as SalesDocumentItemVH;
+}

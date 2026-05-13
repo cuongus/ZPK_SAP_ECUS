@@ -1,0 +1,34 @@
+{
+  "formatVersion": "2",
+  "header": {
+    "description": "An SAP Fiori application.",
+    "originalLanguage": "en",
+    "abapLanguageVersion": "cloudDevelopment"
+  },
+  "generalInformation": {
+    "appType": "ui5",
+    "catalogId": "SAP_TC_UI5_REPO_UIAD",
+    "targetMappingTitle": "Integration ECUS"
+  },
+  "ui5AppDetails": {
+    "appId": "zappecus"
+  },
+  "navigation": {
+    "targetMappingId": "UI5R_8074E962272DB1A458F3580835CB23831AD34DE7_TM",
+    "semanticObject": "zappecus",
+    "action": "display",
+    "desktop": true,
+    "tablet": true,
+    "phone": true
+  },
+  "tiles": [
+    {
+      "id": "UI5R_8074E962272DB1A458F3580835CB23831AD34DE7_AL",
+      "tileType": "static",
+      "isDefault": true,
+      "standard": {
+        "title": "Integration ECUS"
+      }
+    }
+  ]
+}
